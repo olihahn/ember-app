@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ember-android-api",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-05-15",
+  "workers_dev": true,
+  // Diagnostic metadata only: never log photos, hints, credentials or bodies.
+  // Disable full invocation logs; sample automatic timing/status traces.
+  "observability": {
+    "logs": { "enabled": true, "invocation_logs": false },
+    "traces": { "enabled": true, "head_sampling_rate": 0.05 },
+  },
+  "vars": { "OPENAI_MODEL": "gpt-4.1-mini" },
+  // OPENAI_API_KEY and EMBER_DEVICE_TOKEN are set with `wrangler secret put`.
+  // The Worker refuses to serve until both exist; see docs/BACKEND.md.
+}

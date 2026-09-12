@@ -1,0 +1,50 @@
+name: Check and build Ember
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - name: Check the actual Worker runtime with dummy provider traffic
+        run: npm run test:worker
+      - name: Build web app
+        run: npm run build
+      - name: Set up JDK 21
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@40fd30fb8d7440372e1316f5d1809ec01dcd3699 # v4
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;35.0.0 build-tools;36.0.0'
+      - name: Build personal-test Android APK
+        run: |
+          chmod +x android/gradlew
+          npm run android:apk
+      - name: Test Android safe-area policy
+        run: ./android/gradlew -p android :app:testDebugUnitTest --console=plain
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: Ember-android-debug
+          path: outputs/Ember-android.apk
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

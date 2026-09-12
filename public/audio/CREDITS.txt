@@ -1,0 +1,24 @@
+Ember listening room — music credits
+
+Cool Vibes — Kevin MacLeod (incompetech.com)
+ISRC: USUAN1100863
+Source: https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100863
+
+Night on the Docks - Sax — Kevin MacLeod (incompetech.com)
+ISRC: USUAN1100137
+Source: https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100137
+
+Jazz Brunch — Kevin MacLeod (incompetech.com)
+ISRC: USUAN1700074
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700074
+
+Copyright Kevin MacLeod.
+All three tracks are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+License: https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+Full recordings re-encoded to AAC for offline playback. No musical edits.
+No trimming, remixing, looping edits, or volume adjustment was applied.
+Recordings are supplied without warranties under section 5 of CC BY 4.0.
+Music remains available under that license; Ember does not claim exclusive rights or artist endorsement.
+Source and bundled-file checksums, measured durations and acquisition date are in manifest.json.

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-09-08",
+  "artist": "Kevin MacLeod",
+  "copyrightNotice": "Copyright Kevin MacLeod. Licensed under CC BY 4.0.",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseLegalCodeUrl": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+  "catalogUrl": "https://incompetech.com/music/royalty-free/pieces.json",
+  "compositionRightsSourceUrl": "https://incompetech.com/agent-section/",
+  "recordingRightsSourceUrl": "https://incompetech.com/music/royalty-free/faq.html",
+  "modificationNote": "Full recordings re-encoded to AAC for offline playback. No musical edits.",
+  "encoding": {
+    "codec": "AAC",
+    "container": "M4A",
+    "targetBitrateKbps": 96,
+    "sampleRateHz": 44100,
+    "channels": 2,
+    "fastStart": true,
+    "trimmed": false,
+    "remixed": false,
+    "volumeAdjusted": false,
+    "durationMeasurement": "ffprobe format.duration; source and output containers can differ by codec padding."
+  },
+  "tracks": [
+    {
+      "id": "cool-vibes",
+      "title": "Cool Vibes",
+      "artist": "Kevin MacLeod",
+      "isrc": "USUAN1100863",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100863",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Vibes.mp3",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "acquiredAt": "2026-09-08",
+      "original": {
+        "filename": "Cool Vibes.mp3",
+        "sha256": "86e5afb1f71da4c45927bb693cc32e2f72954137cf010599a912fa89cfd4db2e",
+        "bytes": 8737561,
+        "durationSeconds": 218.383675
+      },
+      "bundled": {
+        "src": "/audio/cool-vibes.m4a",
+        "sha256": "df4a0c97f0a74f0ec642765f85a29f481fd987cdc366fe5df92b2575b6ec6b3f",
+        "bytes": 2654674,
+        "durationSeconds": 218.382993
+      }
+    },
+    {
+      "id": "night-on-the-docks-sax",
+      "title": "Night on the Docks - Sax",
+      "artist": "Kevin MacLeod",
+      "isrc": "USUAN1100137",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100137",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Night%20on%20the%20Docks%20-%20Sax.mp3",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "acquiredAt": "2026-09-08",
+      "original": {
+        "filename": "Night on the Docks - Sax.mp3",
+        "sha256": "732871fa31755c4a3ae260cccbdd4044b81ad49cabf8fbb1ee0f5927d36d7d79",
+        "bytes": 5919408,
+        "durationSeconds": 174.08
+      },
+      "bundled": {
+        "src": "/audio/night-on-the-docks-sax.m4a",
+        "sha256": "b35493a0d06c82a9de44ef669188327d8551dec4776a2d4d2a12e1cc10336534",
+        "bytes": 2114257,
+        "durationSeconds": 174.053991
+      }
+    },
+    {
+      "id": "jazz-brunch",
+      "title": "Jazz Brunch",
+      "artist": "Kevin MacLeod",
+      "isrc": "USUAN1700074",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700074",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Jazz%20Brunch.mp3",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "acquiredAt": "2026-09-08",
+      "original": {
+        "filename": "Jazz Brunch.mp3",
+        "sha256": "9e980a5a5ff7663d7f5ac22209190f34f1df465c5a6b588dd2c0bcbfc217e380",
+        "bytes": 10341722,
+        "durationSeconds": 323.108594
+      },
+      "bundled": {
+        "src": "/audio/jazz-brunch.m4a",
+        "sha256": "4a888381f48f09a190829df61b3b012f0e07015d91d9a8a1ffcc92379ea6c20e",
+        "bytes": 3988643,
+        "durationSeconds": 323.108005
+      }
+    }
+  ]
+}

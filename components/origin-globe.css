@@ -1,0 +1,239 @@
+.origin-map.origin-globe {
+  color: var(--ember-ink, #193844);
+  background: transparent;
+  overflow: hidden;
+}
+.origin-globe-stage {
+  position: relative;
+  padding: 17px 8px 10px;
+  background: radial-gradient(
+    ellipse at 45% 38%,
+    #fffaf0a6,
+    #e3dac026 64%,
+    transparent 78%
+  );
+}
+.origin-globe-annotation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px 16px;
+  max-width: 590px;
+  margin: 0 auto 9px;
+  color: #786b50;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.origin-map .origin-globe-sphere {
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  max-height: none;
+  margin: 0 auto;
+  overflow: visible;
+  cursor: grab;
+  touch-action: pan-y pinch-zoom;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.origin-map .origin-globe-sphere.is-turning {
+  cursor: grabbing;
+}
+.origin-map .origin-globe-sphere:focus-visible {
+  outline: 1px dashed #9b6348;
+  outline-offset: -3px;
+  border-radius: 50%;
+}
+.origin-globe-pin {
+  cursor: pointer;
+}
+.origin-globe-turning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  max-width: 560px;
+  margin: -1px auto 0;
+}
+.origin-globe-turning p {
+  margin: 0;
+  color: #6c6d59;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+.origin-globe-accessible-instructions {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.origin-globe-turning p span {
+  margin: 0 4px;
+  color: #af9167;
+}
+.origin-globe-turning button {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #173e42;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+.origin-map .origin-globe-turning button svg {
+  width: 16px;
+  height: 16px;
+  max-height: none;
+}
+.origin-globe-turning button:hover {
+  background: #b8a47b26;
+  color: #193844;
+}
+.origin-globe-turning button:focus-visible,
+.origin-globe-places button:focus-visible {
+  outline: 2px solid #a65135;
+  outline-offset: 3px;
+}
+.origin-globe-turning .origin-globe-reset {
+  margin-left: 3px;
+  color: #887754;
+}
+.origin-globe-caption {
+  padding: 17px 18px 14px;
+  border-top: 1px solid #19384429;
+}
+.origin-globe-selection {
+  color: #596152;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.origin-globe-selection strong {
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--ember-serif);
+  color: #193844;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.origin-globe-selection p {
+  margin: 0;
+}
+.origin-globe-places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  margin-top: 14px;
+}
+.origin-globe-places button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid #95816355;
+  border-radius: 3px;
+  background: #efe6d366;
+  color: #173e42;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  box-shadow: 0 1px 0 #fff9e8b3;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease;
+}
+.origin-globe-places button:hover {
+  border-color: #947959;
+}
+.origin-globe-places button[aria-pressed='true'] {
+  border-color: #173e42;
+  background: #173e42;
+  color: #fcf1d8;
+}
+.origin-globe-place-dot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b95238;
+  box-shadow: 0 0 0 2px #b9523812;
+}
+.origin-globe-places button[aria-pressed='true'] .origin-globe-place-dot {
+  background: #e7c99a;
+}
+.origin-globe-place-count {
+  margin-left: auto;
+  opacity: 0.72;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.origin-globe-footnote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 7px 20px;
+  margin-top: 15px;
+  color: #72705e;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.origin-globe-footnote p {
+  flex: 1 1 240px;
+  margin: 0;
+}
+.origin-globe-footnote a {
+  align-self: flex-end;
+  color: #666f5c;
+}
+@media (max-width: 480px) {
+  .origin-globe-stage {
+    padding: 9px 0 5px;
+  }
+  .origin-globe-annotation {
+    margin: 0 9px 8px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+  .origin-globe-annotation span:last-child {
+    display: none;
+  }
+  .origin-globe-turning {
+    gap: 0;
+  }
+  .origin-globe-turning p {
+    max-width: 155px;
+    font-size: 11px;
+  }
+  .origin-globe-turning p span {
+    display: none;
+  }
+  .origin-globe-caption {
+    padding: 14px 10px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .origin-globe-turning button,
+  .origin-globe-places button {
+    transition: none;
+  }
+}

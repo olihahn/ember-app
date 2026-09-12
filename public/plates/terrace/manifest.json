@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 1024,
+    "height": 1536
+  },
+  "paper": "#f2dba2",
+  "layers": [
+    {
+      "id": "sky",
+      "file": "sky.png",
+      "rect": {
+        "x": -120,
+        "y": -60,
+        "w": 1264,
+        "h": 1656
+      },
+      "depth": 40,
+      "kind": "static"
+    },
+    {
+      "id": "clouds",
+      "file": "clouds.png",
+      "rect": {
+        "x": 93,
+        "y": 25,
+        "w": 931,
+        "h": 427
+      },
+      "depth": 36,
+      "kind": "drift",
+      "opacity": 0.75,
+      "safeEdges": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    {
+      "id": "far-coast",
+      "file": "far-coast.png",
+      "rect": {
+        "x": -120,
+        "y": 404,
+        "w": 761,
+        "h": 116
+      },
+      "depth": 26,
+      "kind": "static",
+      "safeEdges": [
+        "right",
+        "top",
+        "bottom"
+      ]
+    },
+    {
+      "id": "sea",
+      "file": "sea.png",
+      "rect": {
+        "x": 29,
+        "y": 398,
+        "w": 995,
+        "h": 460
+      },
+      "depth": 18,
+      "kind": "sea",
+      "safeEdges": [
+        "top"
+      ]
+    },
+    {
+      "id": "sea-flecks",
+      "file": "sea-flecks.png",
+      "rect": {
+        "x": 153,
+        "y": 462,
+        "w": 871,
+        "h": 330
+      },
+      "depth": 17.6,
+      "kind": "flecks",
+      "safeEdges": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    {
+      "id": "near-coast",
+      "file": "near-coast.png",
+      "rect": {
+        "x": 0,
+        "y": 335,
+        "w": 507,
+        "h": 509
+      },
+      "depth": 11,
+      "kind": "static",
+      "safeEdges": [
+        "right",
+        "top"
+      ]
+    },
+    {
+      "id": "parapet",
+      "file": "parapet.png",
+      "rect": {
+        "x": 0,
+        "y": 745,
+        "w": 1024,
+        "h": 314
+      },
+      "depth": 6.5,
+      "kind": "static"
+    },
+    {
+      "id": "paving",
+      "file": "paving.png",
+      "rect": {
+        "x": -143,
+        "y": 882,
+        "w": 1184,
+        "h": 714
+      },
+      "depth": 4.2,
+      "kind": "static"
+    },
+    {
+      "id": "chair-shadow",
+      "file": "chair-shadow.png",
+      "rect": {
+        "x": 275,
+        "y": 1227,
+        "w": 411,
+        "h": 127
+      },
+      "depth": 4.2,
+      "kind": "static",
+      "safeEdges": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    {
+      "id": "records-shadow",
+      "file": "records-shadow.png",
+      "rect": {
+        "x": 590,
+        "y": 1278,
+        "w": 362,
+        "h": 106
+      },
+      "depth": 4.2,
+      "kind": "static",
+      "safeEdges": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    {
+      "id": "chair",
+      "file": "chair.png",
+      "rect": {
+        "x": 20,
+        "y": 1075,
+        "w": 529,
+        "h": 493
+      },
+      "depth": 2.7,
+      "kind": "static",
+      "safeEdges": [
+        "top",
+        "right",
+        "left"
+      ]
+    },
+    {
+      "id": "tree",
+      "file": "tree.png",
+      "rect": {
+        "x": -53,
+        "y": 184,
+        "w": 1081,
+        "h": 1412
+      },
+      "depth": 1.55,
+      "kind": "breeze",
+      "anchor": {
+        "x": 178,
+        "y": 1530
+      },
+      "breeze": {
+        "hold": 780
+      },
+      "safeEdges": [
+        "top",
+        "right"
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "boat",
+      "file": "boat.png",
+      "rect": {
+        "x": 690,
+        "y": 470,
+        "w": 68,
+        "h": 97
+      },
+      "depth": 18,
+      "kind": "boat",
+      "route": {
+        "amplitude": 50,
+        "period": 45
+      }
+    },
+    {
+      "id": "boat-2",
+      "file": "boat-2.png",
+      "rect": {
+        "x": 800,
+        "y": 470,
+        "w": 58,
+        "h": 90
+      },
+      "depth": 18.5,
+      "kind": "boat",
+      "route": {
+        "amplitude": 50,
+        "period": 60
+      }
+    },
+    {
+      "id": "gull",
+      "file": "gull-up.png",
+      "files": [
+        "gull-up.png",
+        "gull-level.png",
+        "gull-down.png"
+      ],
+      "rect": {
+        "x": 700,
+        "y": 250,
+        "w": 76,
+        "h": 36
+      },
+      "depth": 20,
+      "kind": "gull"
+    },
+    {
+      "id": "ashtray",
+      "file": "ashtray.png",
+      "rect": {
+        "x": 514,
+        "y": 1000,
+        "w": 194,
+        "h": 130
+      },
+      "depth": 4.1,
+      "kind": "static",
+      "ember": {
+        "x": 647,
+        "y": 1057
+      }
+    },
+    {
+      "id": "journal",
+      "file": "journal.png",
+      "rect": {
+        "x": 294,
+        "y": 950,
+        "w": 172,
+        "h": 166
+      },
+      "depth": 4,
+      "kind": "prop",
+      "destination": "journal",
+      "caption": {
+        "dx": 0,
+        "dy": -95
+      }
+    },
+    {
+      "id": "globe",
+      "file": "globe.png",
+      "rect": {
+        "x": 512,
+        "y": 759,
+        "w": 138,
+        "h": 206
+      },
+      "depth": 4,
+      "kind": "prop",
+      "destination": "atlas",
+      "caption": {
+        "dx": -95,
+        "dy": 80
+      }
+    },
+    {
+      "id": "magnifier",
+      "file": "magnifier.png",
+      "rect": {
+        "x": 684,
+        "y": 903,
+        "w": 172,
+        "h": 95
+      },
+      "depth": 4,
+      "kind": "prop",
+      "destination": "identify",
+      "caption": {
+        "dx": -40,
+        "dy": 70
+      }
+    },
+    {
+      "id": "recordPlayer",
+      "file": "player-body.png",
+      "rect": {
+        "x": 569,
+        "y": 1180,
+        "w": 290,
+        "h": 201
+      },
+      "depth": 3,
+      "kind": "player",
+      "destination": "records",
+      "caption": {
+        "dx": -70,
+        "dy": -118
+      },
+      "parts": {
+        "body": {
+          "file": "player-body.png",
+          "rect": {
+            "x": 569,
+            "y": 1180,
+            "w": 290,
+            "h": 201
+          }
+        },
+        "arm": {
+          "file": "player-arm.png",
+          "rect": {
+            "x": 757,
+            "y": 1210,
+            "w": 86,
+            "h": 94
+          },
+          "pivot": {
+            "x": 827,
+            "y": 1225
+          },
+          "restAngle": 0,
+          "playAngle": -22
+        }
+      }
+    }
+  ]
+}

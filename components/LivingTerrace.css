@@ -1,0 +1,212 @@
+.living-terrace {
+  /* Paper from the first frame: the grain overlay and masthead are DOM and
+     show before the plates paint, so the wait reads as the print arriving. */
+  position: relative;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: #173e42;
+  background: #f2dba2;
+}
+.living-terrace-renderer,
+.living-terrace-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.living-terrace-canvas {
+  display: block;
+  touch-action: none;
+}
+.living-terrace-print {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.22' filter='url(%23grain)'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+}
+.living-terrace-masthead {
+  /* Wordmark and tagline on one baseline in the open sky, unboxed. */
+  position: absolute;
+  z-index: 3;
+  top: calc(15px + env(safe-area-inset-top));
+  left: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 9px 13px 10px;
+  color: #173e42;
+  background: transparent;
+  border: 0;
+  text-shadow:
+    0 0 8px #f4dfab,
+    0 0 3px #f4dfab,
+    0 0 1px #f4dfab;
+  pointer-events: none;
+}
+.living-terrace-masthead h1 {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  font: 400 38px/0.95 var(--ember-serif);
+  letter-spacing: -2px;
+}
+.living-terrace-masthead h1 svg {
+  color: #b8492b;
+}
+.living-terrace-masthead > span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font: italic 14px var(--ember-serif);
+}
+.living-terrace-objects {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.living-object {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;
+  visibility: hidden;
+}
+.living-object span {
+  /* Placed by the stage at the theme's caption offset from the object centre. */
+  position: absolute;
+  left: calc(50% + var(--caption-dx, 0px));
+  top: calc(50% + var(--caption-dy, 0px));
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  /* A small italic caption, as if lettered on the print itself. */
+  font: italic 13px var(--ember-serif);
+  letter-spacing: 0;
+  text-transform: none;
+  color: #173e42f2;
+  text-shadow:
+    0 0 1px #f4dfab,
+    0 0 1px #f4dfab;
+  pointer-events: none;
+}
+.living-object:focus-visible {
+  outline: 2px solid #f9e7bb;
+  outline-offset: 3px;
+  border-radius: 50%;
+  background: #fff3d111;
+}
+.living-object:hover span {
+  color: #9d3527;
+}
+.living-object:disabled {
+  cursor: wait;
+}
+.living-object-records {
+  /* Sideways flicks toggle playback; the browser must not treat them as scroll. */
+  touch-action: none;
+}
+.living-terrace[data-status='unavailable'] .living-terrace-objects {
+  display: none;
+}
+.living-terrace-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  padding: 24px 16px calc(12px + env(safe-area-inset-bottom));
+  background: linear-gradient(transparent, #102e3399);
+}
+.living-terrace-records {
+  position: absolute;
+  z-index: 6;
+  top: calc(12px + env(safe-area-inset-top));
+  right: 20px;
+  left: 20px;
+}
+.living-terrace-footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.living-terrace-footer button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-height: 46px;
+  min-width: 48px;
+  width: 20%;
+  max-width: 80px;
+  padding: 4px 2px;
+  background: transparent;
+  border: 0;
+  color: #f4dfab;
+  text-shadow: 0 1px 2px #102e33;
+}
+.living-terrace-footer button span {
+  font-size: 10px;
+}
+.living-terrace-footer button:focus-visible {
+  outline: 1px solid #f4dfab;
+  outline-offset: 2px;
+}
+.living-terrace[data-music-open='true'] .living-terrace-footer {
+  visibility: hidden;
+}
+.living-terrace-message,
+.living-terrace-unavailable {
+  /* Ink on paper, no box. */
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  right: 20px;
+  top: 45%;
+  padding: 0;
+  margin: auto;
+  width: fit-content;
+  max-width: calc(100% - 40px);
+  background: transparent;
+  color: #173e42;
+  text-align: center;
+  font: italic 15px var(--ember-serif);
+}
+.living-terrace-unavailable p {
+  margin: 0 0 10px;
+}
+.living-terrace-unavailable button {
+  border: 0;
+  padding: 12px;
+  background: transparent;
+  color: inherit;
+  font: italic 15px var(--ember-serif);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 44px;
+}
+@media (orientation: landscape) and (max-height: 600px) {
+  .living-terrace-masthead h1 {
+    font-size: 36px;
+  }
+  .living-terrace-footer {
+    left: auto;
+    width: 370px;
+    padding-top: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .living-object {
+    transition: none;
+  }
+}

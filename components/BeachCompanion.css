@@ -1,0 +1,51 @@
+.beach-companion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 92px;
+  color: var(--ink, #173e43);
+  margin-block: 6px 14px;
+}
+
+.beach-companion-art {
+  display: block;
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  background: url('/images/beach-companion.png') 0 0 / 200% 200% no-repeat;
+  image-rendering: pixelated;
+  animation: beach-companion-shrug 2.8s steps(1, end) 1 both;
+}
+
+.beach-companion-message {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(19px, 4.8vw, 25px);
+  line-height: 1.2;
+  max-width: 15em;
+}
+
+@keyframes beach-companion-shrug {
+  0%,
+  14% {
+    background-position: 0 0;
+  }
+  24%,
+  48% {
+    background-position: 100% 0;
+  }
+  36%,
+  60% {
+    background-position: 0 100%;
+  }
+  78%,
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beach-companion-art {
+    animation: none;
+    background-position: 100% 100%;
+  }
+}

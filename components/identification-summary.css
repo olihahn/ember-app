@@ -1,0 +1,39 @@
+.identification-summary {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.identification-summary .identification-summary-preview {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.identification-summary-details {
+  margin-top: 10px;
+}
+
+.identification-summary-details > summary {
+  width: fit-content;
+  min-height: 44px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.identification-summary-details > summary:hover {
+  text-decoration: underline;
+}
+
+.identification-summary-details > summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.identification-summary .identification-summary-details > p {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
